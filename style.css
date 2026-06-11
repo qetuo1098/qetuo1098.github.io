@@ -1,0 +1,21 @@
+body {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.summary {
+  display: none;
+}
+
+body[data-audience="engineer"] .summary.engineer,
+body[data-audience="researcher"] .summary.researcher,
+body[data-audience="general"] .summary.general {
+  display: block;
+}
+
+.paper {
+  margin-top: 2rem;
+}

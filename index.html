@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zi Cong (Daniel) Guo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-audience="engineer">
+  <header>
+    <h1>Zi Cong (Daniel) Guo</h1>
+    <p>Robotics researcher working on state estimation, SLAM, and learning-enhanced autonomy.</p>
+  </header>
+
+  <section>
+    <h2>Publications</h2>
+
+    <div class="toggle">
+      Explain like I'm:
+      <button onclick="setAudience('engineer')">Robotics Engineer</button>
+      <button onclick="setAudience('researcher')">Researcher</button>
+      <button onclick="setAudience('general')">General Public</button>
+    </div>
+
+    <article class="paper">
+      <h3>KILO-EKF</h3>
+
+      <p class="summary engineer">
+        Integrates learned observation models into a standard EKF for robot localization.
+      </p>
+
+      <p class="summary researcher">
+        Learns lifted observation functions and incorporates them into an EKF on SE₂(3).
+      </p>
+
+      <p class="summary general">
+        Helps robots estimate where they are by learning how their sensors behave from data.
+      </p>
+    </article>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
