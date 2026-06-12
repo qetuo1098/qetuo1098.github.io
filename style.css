@@ -1,21 +1,141 @@
 body {
-  max-width: 850px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+  color: #222;
+  background: white;
+}
+
+main {
+  max-width: 900px;
   margin: 40px auto;
-  padding: 0 20px;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.2rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.links {
+  margin-top: 0.5rem;
+}
+
+.audience-toggle {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.audience-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: #1772d0;
+  cursor: pointer;
+}
+
+.audience-btn:hover {
+  text-decoration: underline;
+}
+
+.audience-btn.active {
+  color: #222;
+  font-weight: bold;
+}
+
+.publication {
+  display: flex;
+  gap: 1.2rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.pub-img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.pub-info {
+  flex: 1;
+}
+
+.pub-title,
+.pub-authors,
+.pub-venue,
+.pub-links {
+  margin: 0.25rem 0;
+}
+
+.pub-venue {
+  color: #555;
 }
 
 .summary {
   display: none;
+  margin: 0.7rem 0;
 }
 
-body[data-audience="engineer"] .summary.engineer,
-body[data-audience="researcher"] .summary.researcher,
+body[data-audience="academic"] .summary.academic,
+body[data-audience="practitioner"] .summary.practitioner,
 body[data-audience="general"] .summary.general {
   display: block;
 }
 
-.paper {
+@media (max-width: 650px) {
+  .publication {
+    flex-direction: column;
+  }
+
+  .pub-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.audience-toggle {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+}
+.bottom-toggle {
   margin-top: 2rem;
+  text-align: right;
+}
+
+.pub-award {
+  margin: 0.25rem 0;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.01em;
 }

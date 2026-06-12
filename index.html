@@ -1,42 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Zi Cong (Daniel) Guo</title>
+  <meta charset="UTF-8">
+  <title>Daniel Guo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-audience="engineer">
-  <header>
-    <h1>Zi Cong (Daniel) Guo</h1>
-    <p>Robotics researcher working on state estimation, SLAM, and learning-enhanced autonomy.</p>
-  </header>
+<body data-audience="academic">
+  <main>
+    <header class="intro">
+      <h1>Zi Cong (Daniel) Guo</h1>
 
-  <section>
-    <h2>Publications</h2>
-
-    <div class="toggle">
-      Explain like I'm:
-      <button onclick="setAudience('engineer')">Robotics Engineer</button>
-      <button onclick="setAudience('researcher')">Researcher</button>
-      <button onclick="setAudience('general')">General Public</button>
-    </div>
-
-    <article class="paper">
-      <h3>KILO-EKF</h3>
-
-      <p class="summary engineer">
-        Integrates learned observation models into a standard EKF for robot localization.
+      <p>
+        Robotics researcher in state estimation, SLAM, and learning-enhanced autonomy.
       </p>
 
-      <p class="summary researcher">
-        Learns lifted observation functions and incorporates them into an EKF on SE₂(3).
+      <p class="links">
+        <a href="assets/cv.pdf" target="_blank">CV</a> /
+        <a href="https://scholar.google.com/citations?user=blIlsLQAAAAJ&hl=en" target="_blank">Google Scholar</a> /
+        <a href="https://github.com/qetuo1098" target="_blank">GitHub</a> /
+        <a href="https://www.linkedin.com/in/zi-cong-daniel-guo/" target="_blank">LinkedIn</a> /
+        <a href="mailto:zc.guo@mail.utoronto.ca">Email</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Hi! I am a PhD candidate in the Robotics Institute at the University of Toronto. My research focuses on combining probabilistic state estimation, geometric robotics, and learning-based models for robot localization and SLAM.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-header">
+        <span>Publications</span>
+
+        <span class="audience-toggle">
+          Explain like I'm a(n):
+          <button class="audience-btn active" data-audience="academic">Academic</button>
+          /
+          <button class="audience-btn" data-audience="practitioner">Practitioner</button>
+          /
+          <button class="audience-btn" data-audience="general">Non-specialist</button>
+        </span>
+      </h2>
+
+      <!-- Gaussian inference on manifolds -->
+      <article class="publication">
+        <img src="assets/head.png" alt="Gaussian inference figure" class="pub-img">
+
+        <div class="pub-info">
+          <p class="pub-title">
+            <b>Marginalizing and Conditioning Gaussians onto Linear Approximations of Smooth Manifolds with Applications in Robotics</b>
+          </p>
+
+          <p class="pub-authors">
+            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+          </p>
+
+          <p class="pub-venue">
+            IEEE International Conference on Robotics and Automation (ICRA), 2025
+          </p>
+
+          <p class="pub-award">
+            ★ ICRA Best Conference Paper Award
+          </p>
+
+          <p class="summary academic">
+            Develops a framework for conditioning and marginalizing Gaussian distributions onto
+            linearized manifolds, with connections to covariance extraction in constrained estimation.
+          </p>
+
+          <p class="summary practitioner">
+            Provides practical tools for extracting and manipulating uncertainty in constrained
+            robotics estimation problems, especially when states live on geometric spaces.
+          </p>
+
+          <p class="summary general">
+            Robots need to reason about uncertainty. This work helps them represent uncertainty
+            correctly when working with quantities like position, orientation, and maps.
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2409.09871">paper</a> /
+            <a href="#">bibtex</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- KILO-EKF -->
+      <article class="publication">
+        <img src="assets/placeholder.png" alt="KILO-EKF figure" class="pub-img">
+
+        <div class="pub-info">
+          <p class="pub-title">
+            <b>KILO-EKF: Koopman-Inspired Learned Observations Extended Kalman Filter</b>
+          </p>
+
+          <p class="pub-authors">
+            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+          </p>
+
+          <p class="pub-venue">
+            Preprint, 2026
+          </p>
+
+          <p class="summary academic">
+            Learns lifted observation functions and incorporates them into an EKF on SE₂(3),
+            enabling approximately linear-Gaussian measurement updates with learned models.
+          </p>
+
+          <p class="summary practitioner">
+            Integrates learned observation models into a standard Extended Kalman Filter for
+            robot localization, preserving familiar filtering structure while improving sensor modeling.
+          </p>
+
+          <p class="summary general">
+            Helps robots figure out where they are by learning how their sensors behave from data,
+            instead of relying only on hand-written mathematical models.
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2601.12463">paper</a> /
+            <a href="#">bibtex</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- KoopSE -->
+      <article class="publication">
+        <img src="assets/placeholder.png" alt="KoopSE figure" class="pub-img">
+
+        <div class="pub-info">
+          <p class="pub-title">
+            <b>Koopman Linearization for Data-Driven Batch State Estimation of Control-Affine Systems</b>
+          </p>
+
+          <p class="pub-authors">
+            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+          </p>
+
+          <p class="pub-venue">
+            Preprint, 2026
+          </p>
+
+          <p class="summary academic">
+            Extends Koopman-inspired lifting to both process and measurement models, enabling
+            approximately linear-Gaussian batch estimation for nonlinear control-affine systems.
+          </p>
+
+          <p class="summary practitioner">
+            Replaces difficult-to-model system dynamics with learned linearized representations,
+            allowing standard batch estimation techniques to be applied to complex nonlinear systems.
+          </p>
+
+          <p class="summary general">
+            Helps robots estimate hidden quantities such as position and velocity by learning how
+            their motion and sensors behave directly from data.
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2109.07000">paper</a> /
+            <a href="#">bibtex</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- RCKL-SLAM -->
+      <article class="publication">
+        <img src="assets/placeholder.png" alt="RCKL-SLAM figure" class="pub-img">
+
+        <div class="pub-info">
+          <p class="pub-title">
+            <b>Data-Driven Batch Localization and SLAM Using Koopman Linearization</b>
+          </p>
+
+          <p class="pub-authors">
+            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+          </p>
+
+          <p class="pub-venue">
+            IEEE Transactions on Robotics, 2024
+          </p>
+
+          <p class="summary academic">
+            Introduces Reduced Constrained Koopman Linearization (RCKL) for localization and SLAM,
+            enforcing consistency between lifted and original state representations during batch optimization.
+          </p>
+
+          <p class="summary practitioner">
+            Enables data-driven localization and SLAM while preserving physically meaningful robot
+            trajectories and uncertainty estimates, improving robustness compared to unconstrained approaches.
+          </p>
+
+          <p class="summary general">
+            Helps robots build maps and determine their location using learned models while ensuring
+            that the resulting maps remain physically consistent.
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2309.04375">paper</a> /
+            <a href="#">bibtex</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <img src="assets/placeholder.png" alt="Continuous-time SLAM figure" class="pub-img">
+
+        <div class="pub-info">
+          <p class="pub-title">
+            <b>Smoothing Out the Edges: Continuous-Time Estimation with Gaussian Process Motion Priors on Factor Graphs</b>
+          </p>
+
+          <p class="pub-authors">
+            Connor Holmes, Sven Lilge, <b>Zi Cong Guo</b>, Frank Dellaert, Timothy D. Barfoot
+          </p>
+
+          <p class="pub-venue">
+            Foundations and Trends in Robotics, 2026
+          </p>
+
+          <p class="summary academic">
+            Provides a factor-graph interpretation of Gaussian-process continuous-time state estimation,  demonstrating that trajectory interpolation and querying can be understood through standard  elimination operations. This unifies Gaussian-process trajectory estimation with the factor-graph  framework used throughout localization and SLAM, and provides practical implementations within GTSAM.
+          </p>
+
+          <p class="summary practitioner">
+            Many localization and SLAM systems must combine asynchronous measurements while estimating the robot trajectory between sensor times. Common examples include rolling-shutter cameras and sensors operating at different rates. Modeling the trajectory as a continuous-time Gaussian process helps resolve these timing mismatches by representing motion as a smooth path that can be queried at any time. The paper shows how to implement this approach within standard factor-graph pipelines in the widely used GTSAM library, with practical interfaces and examples for adoption in real-world robotics systems.
+          </p>
+
+          <p class="summary general">
+            Robots often receive information from cameras, lasers, and other sensors operating at different times. In these situations, we can improve navigation by estimating the robot's motion as a smooth path rather than a sequence of disconnected snapshots. This work demonstrates that these methods can be understood and implemented using the same efficient estimation tools already used in many robotics systems.
+          </p>
+
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2605.09073">paper</a> /
+            <a href="https://gtsam.org/2026/05/20/gp-ct-in-gtsam.html">blog</a>
+          </p>
+        </div>
+      </article>
+      <div class="audience-toggle bottom-toggle">
+        <span class="audience-toggle">
+          Explain like I'm a(n):
+          <button class="audience-btn active" data-audience="academic">Academic</button>
+          /
+          <button class="audience-btn" data-audience="practitioner">Practitioner</button>
+          /
+          <button class="audience-btn" data-audience="general">Non-specialist</button>
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Industry Experience</h2>
+
+      <p>
+        <b>Zebra Technologies</b> — Autonomous Navigation Engineer Intern
       </p>
 
-      <p class="summary general">
-        Helps robots estimate where they are by learning how their sensors behave from data.
+      <p>
+        Worked on autonomy software for mobile robots operating in retail environments,
+        including navigation logic, path planning, calibration, and on-robot validation.
       </p>
-    </article>
-  </section>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
