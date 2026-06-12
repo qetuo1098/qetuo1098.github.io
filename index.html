@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Daniel Guo</title>
+  <title>Zi Cong Guo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-audience="academic">
   <main>
     <header class="intro">
-      <h1>Zi Cong (Daniel) Guo</h1>
+      <div class="intro-text">
+      <h1>Zi Cong Guo</h1>
 
       <p>
-        Robotics researcher in state estimation, SLAM, and learning-enhanced autonomy.
+        Hi! I am Zi Cong (Daniel) Guo, a PhD candidate in the Robotics Institute at the University of Toronto advised by <a href="https://discover.research.utoronto.ca/17296-tim-barfoot">Timothy D. Barfoot</a>. My research focuses on combining probabilistic state estimation, geometric robotics, and learning-based models for robot localization and SLAM.
       </p>
 
       <p class="links">
@@ -22,14 +23,12 @@
         <a href="https://www.linkedin.com/in/zi-cong-daniel-guo/" target="_blank">LinkedIn</a> /
         <a href="mailto:zc.guo@mail.utoronto.ca">Email</a>
       </p>
-    </header>
+      </div>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        Hi! I am a PhD candidate in the Robotics Institute at the University of Toronto. My research focuses on combining probabilistic state estimation, geometric robotics, and learning-based models for robot localization and SLAM.
-      </p>
-    </section>
+      <div class="intro-photo">
+        <img src="assets/head_shot_upside.JPG" alt="Zi Cong Guo">
+      </div>
+    </header>
 
     <section>
       <h2 class="section-header">
@@ -51,19 +50,20 @@
 
         <div class="pub-info">
           <p class="pub-title">
-            <b>Marginalizing and Conditioning Gaussians onto Linear Approximations of Smooth Manifolds with Applications in Robotics</b>
+            <b> <a href="https://arxiv.org/pdf/2409.09871">Marginalizing and Conditioning Gaussians onto Linear Approximations of Smooth Manifolds with Applications in Robotics</a></b>
           </p>
 
           <p class="pub-authors">
             <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
           </p>
 
-          <p class="pub-venue">
-            IEEE International Conference on Robotics and Automation (ICRA), 2025
-          </p>
+          <p class="pub-venue"><i>
+            International Conference on Robotics and Automation (ICRA), 2025
+          </i></p>
 
           <p class="pub-award">
-            ★ ICRA Best Conference Paper Award
+            <span class="award-star">★</span>
+            <a href="https://www.ieee-ras.org/awards-recognition/conference-awards/ieee-icra-best-conference-paper-award/" target="_blank">ICRA Best Conference Paper Award</a>
           </p>
 
           <p class="summary academic">
@@ -82,9 +82,22 @@
           </p>
 
           <p class="pub-links">
-            <a href="https://arxiv.org/abs/2409.09871">paper</a> /
-            <a href="#">bibtex</a>
+            <a href="https://ieeexplore.ieee.org/document/11128000/">paper</a> /
+            <a href="https://arxiv.org/abs/2409.09871" target="_blank">arxiv</a> /
+            <button class="link-button bibtex-toggle">bibtex</button>
           </p>
+<div class="bibtex-container">
+  <button class="copy-bibtex">Copy bibtex</button>
+          <pre class="bibtex">@article{guo2025manifoldgaussian,
+  title = {Marginalizing and conditioning Gaussians onto linear approximations of smooth manifolds with applications in robotics},
+  author = {Guo, Zi Cong and Forbes, James R. and Barfoot, Timothy D.},
+  journal  = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year = {2025},
+  month = {05},
+  pages = {2606-2612},
+  doi = {10.1109/ICRA55743.2025.11128000}
+}</pre>
+</div>
         </div>
       </article>
 
@@ -94,16 +107,16 @@
 
         <div class="pub-info">
           <p class="pub-title">
-            <b>KILO-EKF: Koopman-Inspired Learned Observations Extended Kalman Filter</b>
+            <b> <a href="https://arxiv.org/pdf/2601.12463">KILO-EKF: Koopman-Inspired Learned Observations Extended Kalman Filter</a></b>
           </p>
 
           <p class="pub-authors">
             <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
           </p>
 
-          <p class="pub-venue">
-            Preprint, 2026
-          </p>
+          <p class="pub-venue"><i>
+            Submitted to International Conference on Intelligent Robots and Systems (IROS), 2026
+          </i></p>
 
           <p class="summary academic">
             Learns lifted observation functions and incorporates them into an EKF on SE₂(3),
@@ -121,9 +134,23 @@
           </p>
 
           <p class="pub-links">
-            <a href="https://arxiv.org/abs/2601.12463">paper</a> /
-            <a href="#">bibtex</a>
+            <a href="https://arxiv.org/abs/2601.12463">arxiv</a> /
+            <button class="link-button bibtex-toggle">bibtex</button>
           </p>
+
+<div class="bibtex-container">
+  <button class="copy-bibtex">Copy bibtex</button>
+          <pre class="bibtex">@article{kilo-ekf,
+  title={KILO-EKF: Koopman-inspired learned observations extended Kalman filter}, 
+  author={Guo, Zi Cong and Forbes, James R. and Barfoot, Timothy D.},
+  journal={Submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026},
+  eprint={2601.12463},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2601.12463}, 
+}</pre>
+</div>
         </div>
       </article>
 
@@ -133,16 +160,16 @@
 
         <div class="pub-info">
           <p class="pub-title">
-            <b>Koopman Linearization for Data-Driven Batch State Estimation of Control-Affine Systems</b>
+            <b> <a href="https://arxiv.org/pdf/2109.07000">Koopman Linearization for Data-Driven Batch State Estimation of Control-Affine Systems</a></b>
           </p>
 
           <p class="pub-authors">
-            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+            <b>Zi Cong Guo</b>, Vassili Korotkine, James R. Forbes, Timothy D. Barfoot
           </p>
 
-          <p class="pub-venue">
-            Preprint, 2026
-          </p>
+          <p class="pub-venue"><i>
+            Robotics and Automation Letters (RA-L), 2022
+          </i></p>
 
           <p class="summary academic">
             Extends Koopman-inspired lifting to both process and measurement models, enabling
@@ -160,9 +187,25 @@
           </p>
 
           <p class="pub-links">
-            <a href="https://arxiv.org/abs/2109.07000">paper</a> /
-            <a href="#">bibtex</a>
+            <a href="https://ieeexplore.ieee.org/document/9645374/">paper</a> /
+            <a href="https://arxiv.org/abs/2109.07000">arxiv</a> /
+            <button class="link-button bibtex-toggle">bibtex</button>
           </p>
+
+<div class="bibtex-container">
+  <button class="copy-bibtex">Copy bibtex</button>
+          <pre class="bibtex">@article{koopse,
+  author={Guo, Zi Cong and Korotkine, Vassili and Forbes, James R. and Barfoot, Timothy D.},
+  title={Koopman linearization for data-driven batch state estimation of control-affine systems},
+  journal={IEEE Robotics and Automation Letters (RA-L)},
+  year={2022},
+  volume={7},
+  number={2},
+  pages={866-873},
+  doi={10.1109/LRA.2021.3133587}
+}</pre>
+</div>
+
         </div>
       </article>
 
@@ -172,16 +215,16 @@
 
         <div class="pub-info">
           <p class="pub-title">
-            <b>Data-Driven Batch Localization and SLAM Using Koopman Linearization</b>
+            <b> <a href="https://arxiv.org/pdf/2309.04375">Data-Driven Batch Localization and SLAM Using Koopman Linearization</a></b>
           </p>
 
           <p class="pub-authors">
-            <b>Zi Cong Guo</b>, James R. Forbes, Timothy D. Barfoot
+            <b>Zi Cong Guo</b>, Frederike Dümbgen, James R. Forbes, Timothy D. Barfoot
           </p>
 
-          <p class="pub-venue">
-            IEEE Transactions on Robotics, 2024
-          </p>
+          <p class="pub-venue"><i>
+            Transactions on Robotics (T-RO), 2024
+          </i></p>
 
           <p class="summary academic">
             Introduces Reduced Constrained Koopman Linearization (RCKL) for localization and SLAM,
@@ -199,9 +242,25 @@
           </p>
 
           <p class="pub-links">
-            <a href="https://arxiv.org/abs/2309.04375">paper</a> /
-            <a href="#">bibtex</a>
+            <a href="https://ieeexplore.ieee.org/document/10636793/">paper</a> /
+            <a href="https://arxiv.org/abs/2309.04375">arxiv</a> /
+            <button class="link-button bibtex-toggle">bibtex</button>
           </p>
+
+<div class="bibtex-container">
+  <button class="copy-bibtex">Copy bibtex</button>
+          <pre class="bibtex">@article{rckl,
+  author={Guo, Zi Cong and Dümbgen, Frederike and Forbes, James R. and Barfoot, Timothy D.},
+  title={Data-driven batch localization and SLAM using Koopman linearization},
+  journal={IEEE Transactions on Robotics (T-RO)},
+  year={2024},
+  volume={40},
+  number={},
+  pages={3964-3983},
+  doi={10.1109/TRO.2024.3443674}
+}</pre>
+</div>
+
         </div>
       </article>
 
@@ -210,16 +269,16 @@
 
         <div class="pub-info">
           <p class="pub-title">
-            <b>Smoothing Out the Edges: Continuous-Time Estimation with Gaussian Process Motion Priors on Factor Graphs</b>
+            <b> <a href="https://arxiv.org/pdf/2605.09073">Smoothing Out the Edges: Continuous-Time Estimation with Gaussian Process Motion Priors on Factor Graphs</a></b>
           </p>
 
           <p class="pub-authors">
             Connor Holmes, Sven Lilge, <b>Zi Cong Guo</b>, Frank Dellaert, Timothy D. Barfoot
           </p>
 
-          <p class="pub-venue">
-            Foundations and Trends in Robotics, 2026
-          </p>
+          <p class="pub-venue"><i>
+            Submitted to Foundations and Trends in Robotics, 2026
+          </i></p>
 
           <p class="summary academic">
             Provides a factor-graph interpretation of Gaussian-process continuous-time state estimation,  demonstrating that trajectory interpolation and querying can be understood through standard  elimination operations. This unifies Gaussian-process trajectory estimation with the factor-graph  framework used throughout localization and SLAM, and provides practical implementations within GTSAM.
@@ -234,9 +293,25 @@
           </p>
 
           <p class="pub-links">
-            <a href="https://arxiv.org/abs/2605.09073">paper</a> /
-            <a href="https://gtsam.org/2026/05/20/gp-ct-in-gtsam.html">blog</a>
+            <a href="https://arxiv.org/abs/2605.09073">arxiv</a> /
+            <a href="https://gtsam.org/2026/05/20/gp-ct-in-gtsam.html">blog</a> /
+            <button class="link-button bibtex-toggle">bibtex</button>
           </p>
+
+<div class="bibtex-container">
+  <button class="copy-bibtex">Copy bibtex</button>
+          <pre class="bibtex">@article{smoothing-out-edges,
+  title={Smoothing out the edges: continuous-time estimation with Gaussian process motion priors on factor graphs}, 
+  author={Holmes, Connor and Lilge, Sven and Guo, Zi Cong and Dellaert, Frank and Barfoot, Timothy D.},
+  journal = {Submitted to Foundations and Trends in Robotics},
+  year={2026},
+  month = {05},
+  eprint={2605.09073},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2605.09073}
+}</pre>
+</div>
         </div>
       </article>
       <div class="audience-toggle bottom-toggle">
