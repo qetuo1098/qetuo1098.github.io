@@ -166,7 +166,7 @@ body[data-audience="general"] .summary.general {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.6rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
 }
 
 .pub-award a {
