@@ -1,3 +1,12 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -63,11 +72,6 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-.audience-toggle {
-  font-size: 0.9rem;
-  font-weight: normal;
-}
-
 .audience-btn {
   border: none;
   background: none;
@@ -111,6 +115,7 @@ a:hover {
 .pub-venue,
 .pub-links {
   margin: 0.25rem 0;
+  font-size: 1rem;
 }
 
 .pub-venue {
@@ -156,6 +161,7 @@ body[data-audience="general"] .summary.general {
 }
 
 .pub-award {
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -178,10 +184,18 @@ body[data-audience="general"] .summary.general {
 }
 
 .link-button {
+  appearance: none;
+  -webkit-appearance: none;
+
   border: none;
   background: none;
   padding: 0;
+  margin: 0;
+
   font: inherit;
+  font-size: 1em;
+  line-height: inherit;
+
   color: #1772d0;
   cursor: pointer;
 }
