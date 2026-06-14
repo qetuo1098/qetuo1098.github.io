@@ -17,7 +17,7 @@
       </p>
 
       <p class="links">
-        <a href="assets/cv.pdf" target="_blank">CV</a> /
+        <a href="assets/resume.pdf" target="_blank">Resume</a> /
         <a href="https://scholar.google.com/citations?user=blIlsLQAAAAJ&hl=en" target="_blank">Google Scholar</a> /
         <a href="https://github.com/qetuo1098" target="_blank">GitHub</a> /
         <a href="https://www.linkedin.com/in/zi-cong-daniel-guo/" target="_blank">LinkedIn</a> /
@@ -67,24 +67,22 @@
           </p>
 
           <p class="summary academic">
-            Develops a framework for conditioning and marginalizing Gaussian distributions onto
-            linearized manifolds, with connections to covariance extraction in constrained estimation.
+            We extend Gaussian marginalization and conditioning from axis-aligned linear manifolds to general linear manifolds, and use this result to derive a principled local approximation for smooth nonlinear manifolds. This provides theoretically justified inference operations for Gaussian distributions constrained to manifold structure. In robotics, the framework applies naturally to constrained estimation problems, enabling covariance extraction by conditioning an unconstrained Gaussian approximation onto linearized constraints.
           </p>
 
           <p class="summary practitioner">
-            Provides practical tools for extracting and manipulating uncertainty in constrained
-            robotics estimation problems, especially when states live on geometric spaces.
+            Many robotics estimation problems involve states that must satisfy geometric or physical constraints. These constraints may come from the state representation, such as rotations and poses, or from the estimation problem itself. After estimating the optimal states, practitioners often need covariance estimates that remain meaningful on the underlying feasible space. This paper provides principled marginalization and conditioning tools for Gaussian approximations on such spaces, enabling uncertainty analysis in constrained optimization problems. We demonstrate the approach on a few applications, including constrained localization implemented in GTSAM.
           </p>
 
           <p class="summary general">
-            Robots need to reason about uncertainty. This work helps them represent uncertainty
-            correctly when working with quantities like position, orientation, and maps.
+            Robots need to estimate many things about themselves and the world around them, including their position, orientation, motion, and the surrounding map. For planning and safety purposes, they also need to understand how uncertain these estimates are. Standard mathematical tools can represent this uncertainty, but the problem becomes harder when the estimates must obey constraints, such as keeping rotations valid or enforcing contact between a robot arm and a box. This work extends those tools to constrained settings, so the resulting uncertainty estimates remain meaningful for many robotics applications where such constraints naturally arise.
           </p>
-
+          
           <p class="pub-links">
             <a href="https://ieeexplore.ieee.org/document/11128000/">paper</a> /
             <a href="https://arxiv.org/abs/2409.09871" target="_blank">arxiv</a> /
-            <button class="link-button bibtex-toggle">bibtex</button>
+            <button class="link-button bibtex-toggle">bibtex</button> /
+            <a href="https://youtu.be/O84uAMSZ-JI?si=y5i9bqRyJRoaBkho" target="_blank">video</a>
           </p>
 <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
@@ -119,18 +117,21 @@
           </i></p>
 
           <p class="summary academic">
-            Learns lifted observation functions and incorporates them into an EKF on SE₂(3),
-            enabling approximately linear-Gaussian measurement updates with learned models.
+            This paper introduces a Koopman-inspired learned observation model for extended Kalman filtering (EKF)
+            on Lie-group states. Instead of relying on a handcrafted nonlinear measurement model, the method
+            learns a lifted measurement model that is approximately linear in the state, enabling standard
+            EKF measurement updates while preserving the filter's prediction and uncertainty propagation
+            structure. The approach is validated on real-world localization datasets with ultra-wideband range measurements.
           </p>
 
           <p class="summary practitioner">
-            Integrates learned observation models into a standard Extended Kalman Filter for
-            robot localization, preserving familiar filtering structure while improving sensor modeling.
+            Many robot localization systems rely on analytical sensor models that can be difficult to derive accurately, especially when the sensing process is noisy, biased, or affected by the environment. This work introduces KILO-EKF, which keeps the familiar structure of an extended Kalman filter but replaces the measurement model with a learned model trained from data. Since our learned model is linear in a lifted feature space, KILO-EKF allows practitioners to improve filtering accuracy while retaining the interpretability and modularity of a standard filtering pipeline.
           </p>
 
           <p class="summary general">
-            Helps robots figure out where they are by learning how their sensors behave from data,
-            instead of relying only on hand-written mathematical models.
+            Robots often estimate their poses are by comparing sensor readings to what a mathematical model
+            predicts. When that model is inaccurate, the robot's estimates can suffer. This work lets the robot
+            learn part of the sensor model from data, so the model can better reflect the sensor and environment in which the robot operates. This improves pose estimation while keeping the system grounded in well-established localization theory, with interpretable computations, efficient updates, and  principled uncertainty estimation.
           </p>
 
           <p class="pub-links">
@@ -172,18 +173,15 @@
           </i></p>
 
           <p class="summary academic">
-            Extends Koopman-inspired lifting to both process and measurement models, enabling
-            approximately linear-Gaussian batch estimation for nonlinear control-affine systems.
+            This paper presents the Koopman State Estimator (KoopSE), a Koopman-inspired batch state estimation framework for nonlinear control-affine systems. By learning lifted representations of both the process and measurement models, the method approximates the nonlinear estimation problem with a linear-Gaussian structure in feature space. This enables standard batch estimation techniques to be applied to systems whose dynamics or sensors are difficult to model analytically.
           </p>
 
           <p class="summary practitioner">
-            Replaces difficult-to-model system dynamics with learned linearized representations,
-            allowing standard batch estimation techniques to be applied to complex nonlinear systems.
+            Many robotics systems rely on process and measurement models that are difficult to derive accurately, especially when the dynamics are complex or only partially known. This work introduces KoopSE, which learns these models from data and embeds them into a batch estimation framework, allowing the full trajectory to be estimated using familiar optimization-based tools. This provides a way to combine data-driven modeling with structured state estimation, in contrast to purely black-box predictors that replace the estimator entirely.
           </p>
 
           <p class="summary general">
-            Helps robots estimate hidden quantities such as position and velocity by learning how
-            their motion and sensors behave directly from data.
+            Robots estimate their motion by combining what they expect to happen with what their sensors receive. When either the motion model or the sensor model is inaccurate, the resulting estimates can suffer. This work lets the robot learn both relationships from data, so the models can better reflect the system and environment in which the robot operates. These learned models are then used inside a structured estimation method, improving estimation accuracy while keeping the overall approach interpretable and grounded in well-established robotics theory.
           </p>
 
           <p class="pub-links">
@@ -227,18 +225,15 @@
           </i></p>
 
           <p class="summary academic">
-            Introduces Reduced Constrained Koopman Linearization (RCKL) for localization and SLAM,
-            enforcing consistency between lifted and original state representations during batch optimization.
+            This paper extends Koopman-inspired batch estimation to localization and SLAM by introducing the Reduced Constrained Koopman Linearization (RCKL) framework. The method jointly estimates robot states and landmarks using lifted models learned from data, revealing new challenges that arise in larger-scale lifted estimation problems. In particular, unconstrained optimization in the lifted space can drift away from representations that correspond to valid states and landmarks. RCKL addresses this by enforcing consistency with the constraint manifolds of the original robotics problem, enabling data-driven models to be used in SLAM while preserving the required manifold structure.
           </p>
 
           <p class="summary practitioner">
-            Enables data-driven localization and SLAM while preserving physically meaningful robot
-            trajectories and uncertainty estimates, improving robustness compared to unconstrained approaches.
+            We propose the RCKL framework, which uses lifted models learned from data to improve localization and mapping when analytical process or measurement models are difficult to specify. To make lifted estimation practical for SLAM, our method introduces consistency constraints that keep the estimated robot trajectory and landmarks tied to the original physical problem. The resulting constrained optimization problem can be solved efficiently with sequential quadratic programming while exploiting sparsity structure similar to that used in classical batch SLAM solved with Gauss Newton.
           </p>
 
           <p class="summary general">
-            Helps robots build maps and determine their location using learned models while ensuring
-            that the resulting maps remain physically consistent.
+            Robots often need to estimate both where they are and what the surrounding map looks like. When the models used for this estimation are inaccurate, the robot's trajectory and map can become less reliable. This work lets the robot use models learned from data, so the estimation can better reflect the system and environment in which the robot operates. At the same time, it adds constraints that keep the estimated trajectory and map physically meaningful as valid real-world configurations. The method remains efficient by preserving structure from well-established SLAM methods, combining data-driven modeling with a structured and interpretable estimation framework.
           </p>
 
           <p class="pub-links">
@@ -281,7 +276,7 @@
           </i></p>
 
           <p class="summary academic">
-            Provides a factor-graph interpretation of Gaussian-process continuous-time state estimation,  demonstrating that trajectory interpolation and querying can be understood through standard  elimination operations. This unifies Gaussian-process trajectory estimation with the factor-graph  framework used throughout localization and SLAM, and provides practical implementations within GTSAM.
+            Gaussian-process (GP) continuous-time state estimation provides a nonparametric way to represent smooth trajectories, useful for handling asynchronous measurements and interpolating between states, but it has seen less adoption than spline-based approaches in robotics. This paper reframes GP continuous-time estimation in the language of factor graphs, showing that trajectory interpolation and querying can be understood through standard elimination operations. The result connects GP trajectory estimation to the factor-graph framework widely used in localization and SLAM, with practical implementations and examples provided in GTSAM.
           </p>
 
           <p class="summary practitioner">
