@@ -17,11 +17,38 @@ document.querySelectorAll(".audience-btn").forEach((button) => {
 
 document.querySelectorAll(".bibtex-toggle").forEach((button) => {
   button.addEventListener("click", () => {
-    const container = button.closest(".pub-info").querySelector(".bibtex-container");
+    const container = button.closest(".publication").querySelector(".bibtex-container");
 
     const isVisible = getComputedStyle(container).display !== "none";
 
     container.style.display = isVisible ? "none" : "block";
     button.classList.toggle("active", !isVisible);
+  });
+});
+
+document.querySelectorAll(".copy-bibtex").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const container = button.closest(".bibtex-container");
+    const bibtex = container.querySelector(".bibtex").innerText.trim();
+
+    try {
+      await navigator.clipboard.writeText(bibtex);
+
+      button.textContent = "Copied!";
+      button.classList.add("copied");
+
+      setTimeout(() => {
+        button.textContent = "Copy bibtex";
+        button.classList.remove("copied");
+      }, 1500);
+    } catch (err) {
+      console.error("Failed to copy BibTeX:", err);
+
+      button.textContent = "Copy failed";
+
+      setTimeout(() => {
+        button.textContent = "Copy bibtex";
+      }, 1500);
+    }
   });
 });

@@ -46,6 +46,7 @@
 
       <!-- Gaussian inference on manifolds -->
       <article class="publication">
+        <div class="pub-main">
         <div class="pub-media single">
           <img src="assets/gaussian_2_constraint.png" alt="Marginalizing and conditioning onto a 1D manifold">
         </div>
@@ -85,7 +86,9 @@
             <button class="link-button bibtex-toggle">bibtex</button> /
             <a href="https://youtu.be/O84uAMSZ-JI?si=y5i9bqRyJRoaBkho" target="_blank">video</a>
           </p>
-<div class="bibtex-container">
+        </div>
+        </div>
+        <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
           <pre class="bibtex">@article{guo2025manifoldgaussian,
   title = {Marginalizing and conditioning Gaussians onto linear approximations of smooth manifolds with applications in robotics},
@@ -97,11 +100,11 @@
   doi = {10.1109/ICRA55743.2025.11128000}
 }</pre>
 </div>
-        </div>
       </article>
 
       <!-- KILO-EKF -->
       <article class="publication">
+        <div class="pub-main">
         <div class="pub-media stack">
           <img src="assets/kiloekf-1.png" alt="KILO-EKF flowchart">
           <img src="assets/kiloekf-2.png" alt="KILO-EKF application">
@@ -142,8 +145,9 @@
             <a href="https://arxiv.org/abs/2601.12463">arxiv</a> /
             <button class="link-button bibtex-toggle">bibtex</button>
           </p>
-
-<div class="bibtex-container">
+        </div>
+        </div>
+        <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
           <pre class="bibtex">@article{kilo-ekf,
   title={KILO-EKF: Koopman-inspired learned observations extended Kalman filter}, 
@@ -156,13 +160,13 @@
   url={https://arxiv.org/abs/2601.12463}, 
 }</pre>
 </div>
-        </div>
       </article>
 
       <!-- KoopSE -->
       <article class="publication">
+        <div class="pub-main">
         <div class="pub-media single">
-          <img src="assets/koopse_diagram_6.png" alt="KoopSE flowchart">
+          <img src="assets/koopse_diagram_6.png" alt="KoopSE flowchart" style="width: 70%">
         </div>
         <div class="pub-info">
           <p class="pub-title">
@@ -194,8 +198,9 @@
             <a href="https://arxiv.org/abs/2109.07000">arxiv</a> /
             <button class="link-button bibtex-toggle">bibtex</button>
           </p>
-
-<div class="bibtex-container">
+        </div>
+        </div>
+        <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
           <pre class="bibtex">@article{koopse,
   author={Guo, Zi Cong and Korotkine, Vassili and Forbes, James R. and Barfoot, Timothy D.},
@@ -208,47 +213,49 @@
   doi={10.1109/LRA.2021.3133587}
 }</pre>
 </div>
-
-        </div>
       </article>
 
       <!-- RCKL-SLAM -->
       <article class="publication">
-        <div class="pub-media single">
-          <img src="assets/gesling_redkooploc_redkoopslam.png" alt="RCKL-SLAM">
+        <div class="pub-main">
+          <div class="pub-media row" style="justify-content: center;">
+            <img src="assets/rckl-1.png" alt="RCKL-Localization" style="width: 40%;">
+            <img src="assets/rckl-2.png" alt="RCKL-SLAM" style="width: 40%;">
+          </div>
+          <div class="pub-info">
+            <p class="pub-title">
+              <b> <a href="https://arxiv.org/pdf/2309.04375">Data-Driven Batch Localization and SLAM Using Koopman Linearization</a></b>
+            </p>
+
+            <p class="pub-authors">
+              <b>Zi Cong Guo</b>, Frederike Dümbgen, James R. Forbes, Timothy D. Barfoot
+            </p>
+
+            <p class="pub-venue"><i>
+              Transactions on Robotics (T-RO), 2024
+            </i></p>
+
+            <p class="summary academic">
+              This paper extends Koopman-inspired batch estimation to localization and SLAM by introducing the Reduced Constrained Koopman Linearization (RCKL) framework. The method jointly estimates robot states and landmarks using lifted models learned from data, revealing new challenges that arise in larger-scale lifted estimation problems. In particular, unconstrained optimization in the lifted space can drift away from representations that correspond to valid states and landmarks. RCKL addresses this by enforcing consistency with the constraint manifolds of the original robotics problem, enabling data-driven models to be used in SLAM while preserving the required manifold structure.
+            </p>
+
+            <p class="summary practitioner">
+              We propose the RCKL framework, which uses lifted models learned from data to improve localization and mapping when analytical process or measurement models are difficult to specify. To make lifted estimation practical for SLAM, our method introduces consistency constraints that keep the estimated robot trajectory and landmarks tied to the original physical problem. The resulting constrained optimization problem can be solved efficiently with sequential quadratic programming while exploiting sparsity structure similar to that used in classical batch SLAM solved with Gauss Newton.
+            </p>
+
+            <p class="summary general">
+              Robots often need to estimate both where they are and what the surrounding map looks like. When the models used for this estimation are inaccurate, the robot's trajectory and map can become less reliable. This work lets the robot use models learned from data, so the estimation can better reflect the system and environment in which the robot operates. At the same time, it adds constraints that keep the estimated trajectory and map physically meaningful as valid real-world configurations. The method remains efficient by building on well-established localization and mapping techniques, combining data-driven modeling with a structured and interpretable estimation framework.
+            </p>
+
+            <p class="pub-links">
+              <a href="https://ieeexplore.ieee.org/document/10636793/">paper</a> /
+              <a href="https://arxiv.org/abs/2309.04375">arxiv</a> /
+              <button class="link-button bibtex-toggle">bibtex</button>
+            </p>
+
+          </div>
         </div>
-        <div class="pub-info">
-          <p class="pub-title">
-            <b> <a href="https://arxiv.org/pdf/2309.04375">Data-Driven Batch Localization and SLAM Using Koopman Linearization</a></b>
-          </p>
-
-          <p class="pub-authors">
-            <b>Zi Cong Guo</b>, Frederike Dümbgen, James R. Forbes, Timothy D. Barfoot
-          </p>
-
-          <p class="pub-venue"><i>
-            Transactions on Robotics (T-RO), 2024
-          </i></p>
-
-          <p class="summary academic">
-            This paper extends Koopman-inspired batch estimation to localization and SLAM by introducing the Reduced Constrained Koopman Linearization (RCKL) framework. The method jointly estimates robot states and landmarks using lifted models learned from data, revealing new challenges that arise in larger-scale lifted estimation problems. In particular, unconstrained optimization in the lifted space can drift away from representations that correspond to valid states and landmarks. RCKL addresses this by enforcing consistency with the constraint manifolds of the original robotics problem, enabling data-driven models to be used in SLAM while preserving the required manifold structure.
-          </p>
-
-          <p class="summary practitioner">
-            We propose the RCKL framework, which uses lifted models learned from data to improve localization and mapping when analytical process or measurement models are difficult to specify. To make lifted estimation practical for SLAM, our method introduces consistency constraints that keep the estimated robot trajectory and landmarks tied to the original physical problem. The resulting constrained optimization problem can be solved efficiently with sequential quadratic programming while exploiting sparsity structure similar to that used in classical batch SLAM solved with Gauss Newton.
-          </p>
-
-          <p class="summary general">
-            Robots often need to estimate both where they are and what the surrounding map looks like. When the models used for this estimation are inaccurate, the robot's trajectory and map can become less reliable. This work lets the robot use models learned from data, so the estimation can better reflect the system and environment in which the robot operates. At the same time, it adds constraints that keep the estimated trajectory and map physically meaningful as valid real-world configurations. The method remains efficient by preserving structure from well-established SLAM methods, combining data-driven modeling with a structured and interpretable estimation framework.
-          </p>
-
-          <p class="pub-links">
-            <a href="https://ieeexplore.ieee.org/document/10636793/">paper</a> /
-            <a href="https://arxiv.org/abs/2309.04375">arxiv</a> /
-            <button class="link-button bibtex-toggle">bibtex</button>
-          </p>
-
-<div class="bibtex-container">
+        <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
           <pre class="bibtex">@article{rckl,
   author={Guo, Zi Cong and Dümbgen, Frederike and Forbes, James R. and Barfoot, Timothy D.},
@@ -261,13 +268,15 @@
   doi={10.1109/TRO.2024.3443674}
 }</pre>
 </div>
-
-        </div>
+        
       </article>
-
+      
+      <!-- Continuous-time interpolation -->
       <article class="publication">
-        <div class="pub-media single">
-          <img src="assets/fnt.png" alt="GTSAM localization with continuous-time interpolation">
+        <div class="pub-main">
+        <div class="pub-media stack">
+          <img src="assets/fnt-1.png" alt="Continuous-time interpolation on 2D dataset">
+          <img src="assets/fnt-2.png" alt="Continuous-time interpolation on 3D dataset">
         </div>
         <div class="pub-info">
           <p class="pub-title">
@@ -299,8 +308,9 @@
             <a href="https://gtsam.org/2026/05/20/gp-ct-in-gtsam.html">blog</a> /
             <button class="link-button bibtex-toggle">bibtex</button>
           </p>
-
-<div class="bibtex-container">
+        </div>
+        </div>
+        <div class="bibtex-container">
   <button class="copy-bibtex">Copy bibtex</button>
           <pre class="bibtex">@article{smoothing-out-edges,
   title={Smoothing out the edges: continuous-time estimation with Gaussian process motion priors on factor graphs}, 
@@ -314,7 +324,6 @@
   url={https://arxiv.org/abs/2605.09073}
 }</pre>
 </div>
-        </div>
       </article>
       <div class="audience-toggle bottom-toggle">
         <span class="audience-toggle">
