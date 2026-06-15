@@ -290,3 +290,22 @@ body[data-audience="general"] .summary.general {
 .pub-media.row img {
   width: calc((100% - 0.5rem) / 2);
 }
+
+.industry {
+  margin-top: 0rem;
+}
+
+.industry .pub-title,
+.industry .pub-authors,
+.industry .pub-venue {
+  font-size: 1rem;
+}
+
+.industry p {
+  font-size: 1rem;
+}
+.patents {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
