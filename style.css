@@ -309,3 +309,10 @@ body[data-audience="general"] .summary.general {
   color: #555;
   margin-top: 0.5rem;
 }
+.small-note {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.45;
+  margin-top: 0.6rem;
+  margin-bottom: 0.3;
+}
